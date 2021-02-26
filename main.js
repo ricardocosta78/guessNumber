@@ -16,7 +16,7 @@ check.addEventListener('click', function(){
     }else if (guess === random){
         document.querySelector('.message').textContent = "You Win!!!"
         document.querySelector('.title').textContent = "You Win!!!"
-        document.querySelector('body').style.backgroundColor = '#97CD6A';
+        document.querySelector('body').style.backgroundImage = 'linear-gradient(#97CD6Add,#97CD6Add),url("bg.jpg")';
         document.querySelector('.number').textContent = random;
         again.addEventListener('click', restart);
         
@@ -34,8 +34,11 @@ check.addEventListener('click', function(){
             document.querySelector('body').style.backgroundColor = '#BD5943';
         }else{
             document.querySelector('.message').textContent = "LOOSER!!!"
-            document.querySelector('body').style.backgroundColor = '#000000';
+            document.querySelector('.title').textContent = "You Loose";
+            document.querySelector('body').style.backgroundImage = 'linear-gradient(rgba(31, 38, 35, 0.87),rgba(31, 38, 135, 0.47)),url("bg.jpg")';
             document.querySelector('.score').textContent = 0;
+            document.querySelector('.title').style.color ="black";
+            document.querySelector('#main:before').style.backgroundColor = 'rgba(255,255,255,.7)';
         }
         
     }else if(guess < random){
@@ -47,8 +50,10 @@ check.addEventListener('click', function(){
         }else{
             document.querySelector('.message').textContent = "LOOSER!!!"
             document.querySelector('.title').textContent = "You Loose!!!"
-            document.querySelector('body').style.backgroundColor = '#000000';
+            document.querySelector('body').style.backgroundImage = 'linear-gradient(rgba(31, 38, 35, 0.87),rgba(31, 38, 135, 0.47)),url("bg.jpg")';
             document.querySelector('.score').textContent = 0;
+            document.querySelector('.title').style.color ="black";
+            document.querySelector('#main, :before').style.backgroundColor = 'white';
         }
     }
 })

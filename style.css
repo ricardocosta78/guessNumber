@@ -14,7 +14,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background: #f3e15c;
+  background-image:linear-gradient(#f3e15cdd, #27261cd0),
+                  url("bg.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:cover;
   color: #2f4858;
 }
 header {
@@ -24,10 +28,11 @@ header {
   flex-direction: column;
   text-align: center;
 }
-header h1 {
+.title {
   font-size: 4rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  z-index: 10;
 }
 header p {
   font-size: 2rem;
